@@ -17,9 +17,9 @@
 		79E3756F26A6069A00043350 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79E3756E26A6069A00043350 /* Assets.xcassets */; };
 		79E3757226A6069A00043350 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79E3757026A6069A00043350 /* LaunchScreen.storyboard */; };
 		79E3757526A6069A00043350 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E3757426A6069A00043350 /* main.m */; };
-		79E3758826A60B7F00043350 /* Copy of countries.json in Resources */ = {isa = PBXBuildFile; fileRef = 79E3758526A60B7F00043350 /* Copy of countries.json */; };
-		79E3758926A60B7F00043350 /* Copy of cities.json in Resources */ = {isa = PBXBuildFile; fileRef = 79E3758626A60B7F00043350 /* Copy of cities.json */; };
-		79E3758A26A60B7F00043350 /* Copy of airports.json in Resources */ = {isa = PBXBuildFile; fileRef = 79E3758726A60B7F00043350 /* Copy of airports.json */; };
+		79E3758826A60B7F00043350 /* countries.json in Resources */ = {isa = PBXBuildFile; fileRef = 79E3758526A60B7F00043350 /* countries.json */; };
+		79E3758926A60B7F00043350 /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = 79E3758626A60B7F00043350 /* cities.json */; };
+		79E3758A26A60B7F00043350 /* airports.json in Resources */ = {isa = PBXBuildFile; fileRef = 79E3758726A60B7F00043350 /* airports.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,9 +42,9 @@
 		79E3757126A6069A00043350 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		79E3757326A6069A00043350 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79E3757426A6069A00043350 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		79E3758526A60B7F00043350 /* Copy of countries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Copy of countries.json"; sourceTree = "<group>"; };
-		79E3758626A60B7F00043350 /* Copy of cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Copy of cities.json"; sourceTree = "<group>"; };
-		79E3758726A60B7F00043350 /* Copy of airports.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Copy of airports.json"; sourceTree = "<group>"; };
+		79E3758526A60B7F00043350 /* countries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = countries.json; sourceTree = "<group>"; };
+		79E3758626A60B7F00043350 /* cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cities.json; sourceTree = "<group>"; };
+		79E3758726A60B7F00043350 /* airports.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = airports.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,9 +61,9 @@
 		793FEA0226A60BF7009B6574 /* JsonData */ = {
 			isa = PBXGroup;
 			children = (
-				79E3758726A60B7F00043350 /* Copy of airports.json */,
-				79E3758626A60B7F00043350 /* Copy of cities.json */,
-				79E3758526A60B7F00043350 /* Copy of countries.json */,
+				79E3758726A60B7F00043350 /* airports.json */,
+				79E3758626A60B7F00043350 /* cities.json */,
+				79E3758526A60B7F00043350 /* countries.json */,
 			);
 			path = JsonData;
 			sourceTree = "<group>";
@@ -182,11 +182,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79E3758926A60B7F00043350 /* Copy of cities.json in Resources */,
+				79E3758926A60B7F00043350 /* cities.json in Resources */,
 				79E3757226A6069A00043350 /* LaunchScreen.storyboard in Resources */,
-				79E3758A26A60B7F00043350 /* Copy of airports.json in Resources */,
+				79E3758A26A60B7F00043350 /* airports.json in Resources */,
 				79E3756F26A6069A00043350 /* Assets.xcassets in Resources */,
-				79E3758826A60B7F00043350 /* Copy of countries.json in Resources */,
+				79E3758826A60B7F00043350 /* countries.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
