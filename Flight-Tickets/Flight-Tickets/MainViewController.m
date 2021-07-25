@@ -8,7 +8,11 @@
 #import "MainViewController.h"
 #import "DataManager.h"
 
-@interface MainViewController ()
+@interface MainViewController ()<PlaceViewControllerDelegate>
+
+@property (nonatomic, strong) UIButton *departureButton;
+@property (nonatomic, strong) UIButton *arrivalButton;
+@property (nonatomic) SearchRequest searchRequest;
 
 @end
 
@@ -16,39 +20,76 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = UIColor.systemTealColor;
-    [self configureLoadButton];
-}
-
-- (void)configureLoadButton {
-    UIButton *loadButton = [[UIButton alloc] initWithFrame:
-                            CGRectMake(self.view.frame.size.width / 3,
-                                       self.view.frame.size.height / 2,
-                                       self.view.frame.size.width / 3,
-                                       44)];
-    loadButton.layer.masksToBounds = true;
-    loadButton.layer.cornerRadius = loadButton.frame.size.height / 2;
-    loadButton.backgroundColor = UIColor.darkGrayColor;
-    loadButton.tintColor = UIColor.whiteColor;
-    [loadButton setTitle:@"Load data" forState:normal];
-    [loadButton addTarget:self action:@selector(loadFlightsDataFromJSON) forControlEvents:UIControlEventTouchUpInside];
-    
-    [self.view addSubview:loadButton];
-}
-
--(void) loadFlightsDataFromJSON {
     [[DataManager sharedInstance] loadData];
-    self.view.backgroundColor = UIColor.cyanColor;
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadDidComplete) name:kDataManagerLoadDataDidComplete object:nil];
+    [self setupViews];
 }
 
-- (void) loadDidComplete {
-    self.view.backgroundColor = UIColor.greenColor;
+- (void)setupViews {
+    self.view.backgroundColor = UIColor.systemTealColor;
+    self.navigationController.navigationBar.prefersLargeTitles = YES;
+    self.navigationController.navigationBar.largeTitleTextAttributes = @{NSForegroundColorAttributeName: [UIColor blackColor]};
+    self.title = @"Search";
+    
+    _departureButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [_departureButton setTitle:@"From" forState: UIControlStateNormal];
+    _departureButton.tintColor = [UIColor whiteColor];
+    _departureButton.titleLabel.font = [UIFont boldSystemFontOfSize:20];
+    _departureButton.frame = CGRectMake(30.0, 140.0, [UIScreen mainScreen].bounds.size.width - 60.0, 60.0);
+    _departureButton.backgroundColor = [UIColor darkGrayColor];
+    _departureButton.layer.masksToBounds = true;
+    _departureButton.layer.cornerRadius = _departureButton.frame.size.height / 2;
+    [_departureButton addTarget:self action:@selector(placeButtonDidTap:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:_departureButton];
+    
+    _arrivalButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [_arrivalButton setTitle:@"To" forState: UIControlStateNormal];
+    _arrivalButton.tintColor = [UIColor whiteColor];
+    _arrivalButton.titleLabel.font = [UIFont boldSystemFontOfSize:20];
+    _arrivalButton.frame = CGRectMake(30.0, CGRectGetMaxY(_departureButton.frame) + 20.0, [UIScreen mainScreen].bounds.size.width - 60.0, 60.0);
+    _arrivalButton.backgroundColor = [UIColor darkGrayColor];
+    _arrivalButton.layer.masksToBounds = true;
+    _arrivalButton.layer.cornerRadius = _arrivalButton.frame.size.height / 2;
+    [_arrivalButton addTarget:self action:@selector(placeButtonDidTap:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:_arrivalButton];
 }
 
-- (void) dealloc {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
+- (void)placeButtonDidTap:(UIButton *)sender {
+    PlaceViewController *placeViewController;
+    if ([sender isEqual:_departureButton]) {
+        placeViewController = [[PlaceViewController alloc] initWithType: PlaceTypeDeparture];
+    } else {
+        placeViewController = [[PlaceViewController alloc] initWithType: PlaceTypeArrival];
+    }
+    placeViewController.delegate = self;
+    [self.navigationController pushViewController: placeViewController animated:YES];
+}
+
+// MARK: - PlaceViewControllerDelegate
+
+- (void)selectPlace:(id)place withType:(PlaceType)placeType andDataType:(DataSourceType)dataType {
+    [self setPlace:place withDataType:dataType andPlaceType:placeType forButton: (placeType == PlaceTypeDeparture) ? _departureButton : _arrivalButton ];
+}
+
+- (void)setPlace:(id)place withDataType:(DataSourceType)dataType andPlaceType:(PlaceType)placeType forButton:(UIButton *)button {
+    NSString *title;
+    NSString *iata;
+    if (dataType == DataSourceTypeCity) {
+        City *city = (City *)place;
+        title = city.name;
+        iata = city.code;
+    }
+    else if (dataType == DataSourceTypeAirport) {
+        Airport *airport = (Airport *)place;
+        title = airport.name;
+        iata = airport.cityCode;
+    }
+    if (placeType == PlaceTypeDeparture) {
+        _searchRequest.origin = iata;
+    } else {
+        _searchRequest.destionation = iata;
+    }
+    [button setTitle: title forState: UIControlStateNormal];
 }
 
 @end
