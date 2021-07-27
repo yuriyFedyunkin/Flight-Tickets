@@ -22,7 +22,7 @@
     
     MainViewController *mainViewController = [MainViewController new];
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:mainViewController];
-    
+    self.window.overrideUserInterfaceStyle = UIUserInterfaceStyleLight;
     self.window.rootViewController = navigationController;
     UIWindowScene *windowScene = (UIWindowScene *)scene;
     [self.window setWindowScene:windowScene];
