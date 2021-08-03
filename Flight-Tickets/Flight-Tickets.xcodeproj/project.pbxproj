@@ -19,6 +19,7 @@
 		79A5680B26B7080F00F3DF18 /* LocationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A5680A26B7080F00F3DF18 /* LocationService.m */; };
 		79A5681026B709F000F3DF18 /* MapPrice.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A5680F26B709F000F3DF18 /* MapPrice.m */; };
 		79A5681526B70B0200F3DF18 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A5681426B70B0200F3DF18 /* MapViewController.m */; };
+		79A5689726B9914B00F3DF18 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A5689626B9914B00F3DF18 /* TabBarController.m */; };
 		79E3756426A6069000043350 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E3756326A6069000043350 /* AppDelegate.m */; };
 		79E3756726A6069000043350 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E3756626A6069000043350 /* SceneDelegate.m */; };
 		79E3756A26A6069000043350 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E3756926A6069000043350 /* MainViewController.m */; };
@@ -55,6 +56,8 @@
 		79A5680F26B709F000F3DF18 /* MapPrice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapPrice.m; sourceTree = "<group>"; };
 		79A5681326B70B0200F3DF18 /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		79A5681426B70B0200F3DF18 /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		79A5689526B9914B00F3DF18 /* TabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
+		79A5689626B9914B00F3DF18 /* TabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
 		79E3755F26A6069000043350 /* Flight-Tickets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flight-Tickets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79E3756226A6069000043350 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		79E3756326A6069000043350 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -159,6 +162,15 @@
 			path = PlaceViewController;
 			sourceTree = "<group>";
 		};
+		79A5689426B9912600F3DF18 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				79A5689526B9914B00F3DF18 /* TabBarController.h */,
+				79A5689626B9914B00F3DF18 /* TabBarController.m */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
 		79E3755626A6068F00043350 = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +191,7 @@
 		79E3756126A6069000043350 /* Flight-Tickets */ = {
 			isa = PBXGroup;
 			children = (
+				79A5689426B9912600F3DF18 /* TabBarController */,
 				79A5681226B70AE400F3DF18 /* MapViewController */,
 				79A567BB26B0926800F3DF18 /* TicketsViewController */,
 				79A5681826B70ECC00F3DF18 /* PlaceViewController */,
@@ -283,6 +296,7 @@
 				79A5681526B70B0200F3DF18 /* MapViewController.m in Sources */,
 				79A567B426B08D0500F3DF18 /* Ticket.m in Sources */,
 				793FEA1026A60D0C009B6574 /* City.m in Sources */,
+				79A5689726B9914B00F3DF18 /* TabBarController.m in Sources */,
 				79A5680B26B7080F00F3DF18 /* LocationService.m in Sources */,
 				79E3756726A6069000043350 /* SceneDelegate.m in Sources */,
 			);
