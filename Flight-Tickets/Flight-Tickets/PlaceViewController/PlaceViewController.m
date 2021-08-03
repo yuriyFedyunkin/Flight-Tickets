@@ -14,6 +14,8 @@
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) UISegmentedControl *segmentedControl;
 @property (nonatomic, strong) NSArray *currentArray;
+@property (nonatomic, strong) NSArray *searchArray;
+@property (nonatomic, strong) UISearchController *searchController;
 
 @end
 
@@ -50,8 +52,15 @@
     _segmentedControl.selectedSegmentIndex = 0;
     [self changeSource];
     
+    _searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
+    _searchController.searchBar.barTintColor = UIColor.systemTealColor;
+    _searchController.obscuresBackgroundDuringPresentation = NO;
+    _searchController.searchResultsUpdater = self;
+    _searchArray = [NSArray new];
+    
     _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     _tableView.backgroundColor = UIColor.clearColor;
+    _tableView.tableHeaderView = _searchController.searchBar;
     _tableView.delegate = self;
     _tableView.dataSource = self;
     [self.view addSubview:_tableView];

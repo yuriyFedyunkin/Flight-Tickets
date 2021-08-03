@@ -19,7 +19,7 @@ typedef enum PlaceType {
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface PlaceViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
+@interface PlaceViewController : UIViewController<UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating>
 
 @property (nonatomic, strong) id<PlaceViewControllerDelegate>delegate;
 - (instancetype)initWithType:(PlaceType)type;
