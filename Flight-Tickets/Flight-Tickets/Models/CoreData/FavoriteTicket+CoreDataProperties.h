@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nullable, nonatomic, copy) NSString *airline;
 @property (nullable, nonatomic, copy) NSDate *created;
-@property (nullable, nonatomic, copy) NSDate *depature;
+@property (nullable, nonatomic, copy) NSDate *departure;
 @property (nullable, nonatomic, copy) NSDate *expires;
 @property (nonatomic) int16_t flightNumber;
 @property (nullable, nonatomic, copy) NSString *from;

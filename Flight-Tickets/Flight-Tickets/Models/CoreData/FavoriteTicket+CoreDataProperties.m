@@ -16,7 +16,7 @@
 
 @dynamic airline;
 @dynamic created;
-@dynamic depature;
+@dynamic departure;
 @dynamic expires;
 @dynamic flightNumber;
 @dynamic from;
