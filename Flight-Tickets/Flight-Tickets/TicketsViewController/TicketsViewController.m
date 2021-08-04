@@ -7,6 +7,7 @@
 
 #import "TicketsViewController.h"
 #import "TicketTableViewCell.h"
+#import "CoreDataHelper.h"
 
 #define TicketCellReuseIdentifier @"TicketCellIdentifier"
 
@@ -16,10 +17,22 @@
 
 @end
 
-@implementation TicketsViewController
+@implementation TicketsViewController {
+    BOOL isFavorites;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    if (isFavorites) {
+        self.navigationController.navigationBar.prefersLargeTitles = YES;
+        _tickets = [[CoreDataHelper sharedInstance] favorites];
+        [self.tableView reloadData];
+    }
 }
 
 - (instancetype)initWithTickets:(NSArray *)tickets {
@@ -33,6 +46,17 @@
     return self;
 }
 
+- (instancetype)initFavoriteTicketsController {
+    self = [super init];
+    if (self) {
+        isFavorites = YES;
+        self.tickets = [NSArray new];
+        self.title = @"Favorites";
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        [self.tableView registerClass:[TicketTableViewCell class] forCellReuseIdentifier:TicketCellReuseIdentifier];
+    }
+    return self;
+}
 
 #pragma mark - Table view data source
 
@@ -46,7 +70,13 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TicketTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:TicketCellReuseIdentifier forIndexPath:indexPath];
-    cell.ticket = [_tickets objectAtIndex:indexPath.row];
+    
+    if (isFavorites) {
+        cell.favoriteTicket = [_tickets objectAtIndex:indexPath.row];
+    } else {
+        cell.ticket = [_tickets objectAtIndex:indexPath.row];
+    }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 
