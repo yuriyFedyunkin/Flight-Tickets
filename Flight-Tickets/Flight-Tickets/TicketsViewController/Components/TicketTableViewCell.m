@@ -97,4 +97,25 @@
     });
 }
 
+- (void)setFavoriteTicket:(FavoriteTicket *)favoriteTicket {
+    _favoriteTicket = favoriteTicket;
+    
+    _priceLabel.text = [NSString stringWithFormat:@"%lld руб.", favoriteTicket.price];
+    _placesLabel.text = [NSString stringWithFormat:@"%@ - %@", favoriteTicket.from, favoriteTicket.to];
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateFormat = @"dd MMMM yyyy hh:mm";
+    _dateLabel.text = [dateFormatter stringFromDate:favoriteTicket.departure];
+    
+    dispatch_async(dispatch_get_global_queue(0,0), ^{
+        NSURL *urlLogo = AirlineLogo(favoriteTicket.airline);
+        NSData * data = [[NSData alloc] initWithContentsOfURL: urlLogo];
+        if ( data == nil )
+            return;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.airlineLogoView.image = [UIImage imageWithData: data];
+        });
+    });
+}
+
 @end
