@@ -34,6 +34,7 @@
 		79E3758926A60B7F00043350 /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = 79E3758626A60B7F00043350 /* cities.json */; };
 		79E3758A26A60B7F00043350 /* airports.json in Resources */ = {isa = PBXBuildFile; fileRef = 79E3758726A60B7F00043350 /* airports.json */; };
 		79E7DAC526C2F4D300CFC876 /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E7DAC426C2F4D300CFC876 /* ProgressView.m */; };
+		79E7DACB26C2FCBD00CFC876 /* ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E7DACA26C2FCBD00CFC876 /* ContentViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +87,8 @@
 		79E3758726A60B7F00043350 /* airports.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = airports.json; sourceTree = "<group>"; };
 		79E7DAC326C2F4D300CFC876 /* ProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProgressView.h; sourceTree = "<group>"; };
 		79E7DAC426C2F4D300CFC876 /* ProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProgressView.m; sourceTree = "<group>"; };
+		79E7DAC926C2FCBD00CFC876 /* ContentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContentViewController.h; sourceTree = "<group>"; };
+		79E7DACA26C2FCBD00CFC876 /* ContentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContentViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +223,7 @@
 		79E3756126A6069000043350 /* Flight-Tickets */ = {
 			isa = PBXGroup;
 			children = (
+				79E7DAC826C2FCA400CFC876 /* ContentViewController */,
 				79E7DAC226C2F4AE00CFC876 /* ProgressView */,
 				79A5689426B9912600F3DF18 /* TabBarController */,
 				79A5681226B70AE400F3DF18 /* MapViewController */,
@@ -248,6 +252,15 @@
 				79E7DAC426C2F4D300CFC876 /* ProgressView.m */,
 			);
 			path = ProgressView;
+			sourceTree = "<group>";
+		};
+		79E7DAC826C2FCA400CFC876 /* ContentViewController */ = {
+			isa = PBXGroup;
+			children = (
+				79E7DAC926C2FCBD00CFC876 /* ContentViewController.h */,
+				79E7DACA26C2FCBD00CFC876 /* ContentViewController.m */,
+			);
+			path = ContentViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,6 +337,7 @@
 				794F6FE626ADE44D00654B7F /* PlaceViewController.m in Sources */,
 				79A568B126BA9B9B00F3DF18 /* FavoriteTicket+CoreDataClass.m in Sources */,
 				79A567C426B0949200F3DF18 /* TicketsViewController.m in Sources */,
+				79E7DACB26C2FCBD00CFC876 /* ContentViewController.m in Sources */,
 				79E3756A26A6069000043350 /* MainViewController.m in Sources */,
 				793FEA0726A60CE0009B6574 /* Airport.m in Sources */,
 				79A567BF26B092A900F3DF18 /* TicketTableViewCell.m in Sources */,

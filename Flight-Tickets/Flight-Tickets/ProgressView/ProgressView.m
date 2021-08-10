@@ -15,7 +15,7 @@
     static ProgressView *instance;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        instance = [[ProgressView alloc] initWithFrame: [UIApplication sharedApplication].delegate.window.bounds];
+        instance = [[ProgressView alloc] initWithFrame: [UIApplication sharedApplication].windows.firstObject.bounds];
         [instance setup];
     });
     return instance;
