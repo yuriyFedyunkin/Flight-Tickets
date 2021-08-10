@@ -36,6 +36,7 @@
 		79E7DAC526C2F4D300CFC876 /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E7DAC426C2F4D300CFC876 /* ProgressView.m */; };
 		79E7DACB26C2FCBD00CFC876 /* ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E7DACA26C2FCBD00CFC876 /* ContentViewController.m */; };
 		79E7DAD126C2FE5A00CFC876 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E7DAD026C2FE5A00CFC876 /* FirstViewController.m */; };
+		79E7DAD626C304A100CFC876 /* NotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E7DAD526C304A100CFC876 /* NotificationCenter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +93,8 @@
 		79E7DACA26C2FCBD00CFC876 /* ContentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContentViewController.m; sourceTree = "<group>"; };
 		79E7DACF26C2FE5A00CFC876 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		79E7DAD026C2FE5A00CFC876 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		79E7DAD426C304A100CFC876 /* NotificationCenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationCenter.h; sourceTree = "<group>"; };
+		79E7DAD526C304A100CFC876 /* NotificationCenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationCenter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +147,8 @@
 				79A5680A26B7080F00F3DF18 /* LocationService.m */,
 				79A568A726BA92A200F3DF18 /* CoreDataHelper.h */,
 				79A568A826BA92A200F3DF18 /* CoreDataHelper.m */,
+				79E7DAD426C304A100CFC876 /* NotificationCenter.h */,
+				79E7DAD526C304A100CFC876 /* NotificationCenter.m */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -358,6 +363,7 @@
 				79E3756426A6069000043350 /* AppDelegate.m in Sources */,
 				79A568A926BA92A200F3DF18 /* CoreDataHelper.m in Sources */,
 				79A567B026B0855700F3DF18 /* APIManager.m in Sources */,
+				79E7DAD626C304A100CFC876 /* NotificationCenter.m in Sources */,
 				79E7DAC526C2F4D300CFC876 /* ProgressView.m in Sources */,
 				79A568B226BA9B9B00F3DF18 /* FavoriteTicket+CoreDataProperties.m in Sources */,
 				79E3757526A6069A00043350 /* main.m in Sources */,
