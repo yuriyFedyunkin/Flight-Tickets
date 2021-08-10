@@ -9,6 +9,7 @@
 #import "DataManager.h"
 #import "TicketsViewController.h"
 #import "ProgressView.h"
+#import "FirstViewController.h"
 
 @interface MainViewController ()<PlaceViewControllerDelegate>
 
@@ -27,6 +28,21 @@
     [[DataManager sharedInstance] loadData];
     
     [self setupViews];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    [self presentFirstViewControllerIfNeeded];
+}
+
+- (void)presentFirstViewControllerIfNeeded
+{
+    BOOL isFirstStart = [[NSUserDefaults standardUserDefaults] boolForKey:@"first_start"];
+    if (!isFirstStart) {
+        FirstViewController *firstViewController = [[FirstViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
+        [self presentViewController:firstViewController animated:YES completion:nil];
+    }
 }
 
 - (void)setupViews {

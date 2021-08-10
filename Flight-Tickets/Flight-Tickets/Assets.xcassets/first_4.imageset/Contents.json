@@ -1,0 +1,15 @@
+{
+  "images" : [
+    {
+      "filename" : "airplane-flying-above-clouds_shutterstock_553131187-1068x601.jpg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "preserves-vector-representation" : true
+  }
+}
