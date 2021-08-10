@@ -33,6 +33,7 @@
 		79E3758826A60B7F00043350 /* countries.json in Resources */ = {isa = PBXBuildFile; fileRef = 79E3758526A60B7F00043350 /* countries.json */; };
 		79E3758926A60B7F00043350 /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = 79E3758626A60B7F00043350 /* cities.json */; };
 		79E3758A26A60B7F00043350 /* airports.json in Resources */ = {isa = PBXBuildFile; fileRef = 79E3758726A60B7F00043350 /* airports.json */; };
+		79E7DAC526C2F4D300CFC876 /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E7DAC426C2F4D300CFC876 /* ProgressView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +84,8 @@
 		79E3758526A60B7F00043350 /* countries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = countries.json; sourceTree = "<group>"; };
 		79E3758626A60B7F00043350 /* cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cities.json; sourceTree = "<group>"; };
 		79E3758726A60B7F00043350 /* airports.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = airports.json; sourceTree = "<group>"; };
+		79E7DAC326C2F4D300CFC876 /* ProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProgressView.h; sourceTree = "<group>"; };
+		79E7DAC426C2F4D300CFC876 /* ProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProgressView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +220,7 @@
 		79E3756126A6069000043350 /* Flight-Tickets */ = {
 			isa = PBXGroup;
 			children = (
+				79E7DAC226C2F4AE00CFC876 /* ProgressView */,
 				79A5689426B9912600F3DF18 /* TabBarController */,
 				79A5681226B70AE400F3DF18 /* MapViewController */,
 				79A567BB26B0926800F3DF18 /* TicketsViewController */,
@@ -235,6 +239,15 @@
 				79E3757426A6069A00043350 /* main.m */,
 			);
 			path = "Flight-Tickets";
+			sourceTree = "<group>";
+		};
+		79E7DAC226C2F4AE00CFC876 /* ProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				79E7DAC326C2F4D300CFC876 /* ProgressView.h */,
+				79E7DAC426C2F4D300CFC876 /* ProgressView.m */,
+			);
+			path = ProgressView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,6 +330,7 @@
 				79E3756426A6069000043350 /* AppDelegate.m in Sources */,
 				79A568A926BA92A200F3DF18 /* CoreDataHelper.m in Sources */,
 				79A567B026B0855700F3DF18 /* APIManager.m in Sources */,
+				79E7DAC526C2F4D300CFC876 /* ProgressView.m in Sources */,
 				79A568B226BA9B9B00F3DF18 /* FavoriteTicket+CoreDataProperties.m in Sources */,
 				79E3757526A6069A00043350 /* main.m in Sources */,
 				793FEA0C26A60CFC009B6574 /* Country.m in Sources */,
