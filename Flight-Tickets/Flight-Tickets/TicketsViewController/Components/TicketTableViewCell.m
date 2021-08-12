@@ -11,7 +11,6 @@
 
 @interface TicketTableViewCell ()
 
-@property (nonatomic, strong) UIImageView *airlineLogoView;
 @property (nonatomic, strong) UILabel *priceLabel;
 @property (nonatomic, strong) UILabel *placesLabel;
 @property (nonatomic, strong) UILabel *dateLabel;
@@ -45,6 +44,10 @@
         self.contentView.layer.cornerRadius = 6.0;
         self.contentView.backgroundColor = [UIColor whiteColor];
         
+        /// state before animation
+        self.contentView.transform = CGAffineTransformMakeScale(0.5, 0.5);
+        self.contentView.alpha = 0;
+        
         _priceLabel = [[UILabel alloc] initWithFrame:self.bounds];
         _priceLabel.font = [UIFont systemFontOfSize:24.0 weight:UIFontWeightBold];
         _placesLabel.textColor = [UIColor blackColor];
@@ -62,6 +65,17 @@
         _dateLabel = [[UILabel alloc] initWithFrame:self.bounds];
         _dateLabel.font = [UIFont systemFontOfSize:15.0 weight:UIFontWeightRegular];
         [self.contentView addSubview:_dateLabel];
+        
+        /// animation block
+        [UIView animateWithDuration:0.6
+                              delay:0.1
+             usingSpringWithDamping:0.8
+              initialSpringVelocity:0.2
+                            options:UIViewAnimationOptionCurveEaseOut
+                         animations:^{
+            self.contentView.transform = CGAffineTransformIdentity;
+            self.contentView.alpha = 1;
+        } completion:nil];
     }
     return self;
 }
