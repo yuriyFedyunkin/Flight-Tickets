@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  Flight-Tickets
+
+  Created by Yuriy Fedyunkin on 13.08.2021.
+  
+*/
+
+// MARK: - TabBarController
+
+"search_tab" = "Поиск";
+"map_tab" = "Карта цен";
+"favorites_tab" = "Избранное";
