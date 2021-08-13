@@ -11,3 +11,10 @@
 "search_tab" = "Search";
 "map_tab" = "Price map";
 "favorites_tab" = "Favorites";
+
+//MARK: -  MainViewController
+
+"main_from" = "From";
+"main_to" = "To";
+"main_search" = "Search";
+"main_find" = "Find";

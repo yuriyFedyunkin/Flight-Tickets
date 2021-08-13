@@ -1,4 +1,4 @@
-/* 
+/*
   Localizable.strings
   Flight-Tickets
 
@@ -11,3 +11,10 @@
 "search_tab" = "Поиск";
 "map_tab" = "Карта цен";
 "favorites_tab" = "Избранное";
+
+//MARK: -  MainViewController
+
+"main_from" = "Откуда";
+"main_to" = "Куда";
+"main_search" = "Поиск";
+"main_find" = "Найти";

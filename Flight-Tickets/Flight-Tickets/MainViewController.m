@@ -10,6 +10,7 @@
 #import "TicketsViewController.h"
 #import "ProgressView.h"
 #import "FirstViewController.h"
+#import "NSString+Localize.h"
 
 @interface MainViewController ()<PlaceViewControllerDelegate>
 
@@ -49,7 +50,7 @@
     self.view.backgroundColor = UIColor.systemTealColor;
     self.navigationController.navigationBar.prefersLargeTitles = YES;
     self.navigationController.navigationBar.largeTitleTextAttributes = @{NSForegroundColorAttributeName: [UIColor blackColor]};
-    self.title = @"Search";
+    self.title = [@"main_search" localize];
     
     _placeContainerView = [[UIView alloc] initWithFrame:CGRectMake(20.0, 140.0, [UIScreen mainScreen].bounds.size.width - 40.0, 170.0)];
     _placeContainerView.backgroundColor = [UIColor whiteColor];
@@ -60,7 +61,7 @@
     _placeContainerView.layer.cornerRadius = 6.0;
     
     _departureButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    [_departureButton setTitle:@"From" forState: UIControlStateNormal];
+    [_departureButton setTitle:[@"main_from" localize] forState: UIControlStateNormal];
     _departureButton.tintColor = [UIColor blackColor];
     _departureButton.titleLabel.font = [UIFont boldSystemFontOfSize:16];
     _departureButton.frame = CGRectMake(10.0, 20.0, _placeContainerView.frame.size.width - 20.0, 60.0);
@@ -70,7 +71,7 @@
     [self.placeContainerView addSubview:_departureButton];
     
     _arrivalButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    [_arrivalButton setTitle:@"To" forState: UIControlStateNormal];
+    [_arrivalButton setTitle:[@"main_to" localize] forState: UIControlStateNormal];
     _arrivalButton.tintColor = [UIColor blackColor];
     _arrivalButton.titleLabel.font = [UIFont boldSystemFontOfSize:16];
     _arrivalButton.frame = CGRectMake(10.0, CGRectGetMaxY(_departureButton.frame) + 10.0, _placeContainerView.frame.size.width - 20.0, 60.0);
@@ -84,7 +85,7 @@
     [self.view addSubview:_placeContainerView];
     
     _searchButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    [_searchButton setTitle:@"Find" forState:UIControlStateNormal];
+    [_searchButton setTitle:[@"main_find" localize] forState:UIControlStateNormal];
     _searchButton.tintColor = [UIColor whiteColor];
     _searchButton.frame = CGRectMake(30.0, CGRectGetMaxY(_placeContainerView.frame) + 30, [UIScreen mainScreen].bounds.size.width - 60.0, 60.0);
     _searchButton.backgroundColor = [UIColor blackColor];
