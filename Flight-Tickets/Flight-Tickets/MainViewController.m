@@ -117,16 +117,16 @@
                         TicketsViewController *ticketsViewController = [[TicketsViewController alloc] initWithTickets:tickets];
                         [self.navigationController showViewController:ticketsViewController sender:self];
                     } else {
-                        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Увы!" message:@"По данному направлению билетов не найдено" preferredStyle: UIAlertControllerStyleAlert];
-                        [alertController addAction:[UIAlertAction actionWithTitle:@"Закрыть" style:(UIAlertActionStyleDefault) handler:nil]];
+                        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:[@"main_ups" localize] message:[@"main_ups_message" localize] preferredStyle: UIAlertControllerStyleAlert];
+                        [alertController addAction:[UIAlertAction actionWithTitle:[@"main_close" localize] style:(UIAlertActionStyleDefault) handler:nil]];
                         [self presentViewController:alertController animated:YES completion:nil];
                     }
                 }];
             }];
         }];
     } else {
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Ошибка" message:@"Необходимо указать место отправления и место прибытия" preferredStyle:UIAlertControllerStyleAlert];
-        [alertController addAction:[UIAlertAction actionWithTitle:@"Закрыть" style:(UIAlertActionStyleDefault) handler:nil]];
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:[@"main_error" localize] message:[@"main_error_message" localize] preferredStyle:UIAlertControllerStyleAlert];
+        [alertController addAction:[UIAlertAction actionWithTitle:[@"main_close" localize] style:(UIAlertActionStyleDefault) handler:nil]];
         [self presentViewController:alertController animated:YES completion:nil];
     }
 }

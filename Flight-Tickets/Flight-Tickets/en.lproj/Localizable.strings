@@ -18,3 +18,8 @@
 "main_to" = "To";
 "main_search" = "Search";
 "main_find" = "Find";
+"main_ups" = "Ups!";
+"main_ups_message" = "No results for selected route";
+"main_close" = "Close";
+"main_error" = "Error";
+"main_error_message" = "Place of arrival and departure is required";
