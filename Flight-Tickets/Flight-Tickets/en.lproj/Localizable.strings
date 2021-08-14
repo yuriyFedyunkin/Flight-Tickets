@@ -1,0 +1,66 @@
+/*
+  Localizable.strings
+  Flight-Tickets
+
+  Created by Yuriy Fedyunkin on 13.08.2021.
+  
+*/
+
+// MARK: - TabBarController
+
+"search_tab" = "Search";
+"map_tab" = "Price map";
+"favorites_tab" = "Favorites";
+
+//MARK: -  MainViewController
+
+"main_from" = "From";
+"main_to" = "To";
+"main_search" = "Search";
+"main_find" = "Find";
+"main_ups" = "Ups!";
+"main_ups_message" = "No results for selected route";
+"main_close" = "Close";
+"main_error" = "Error";
+"main_error_message" = "Place of arrival and departure is required";
+
+// MARK: FirstViewController
+
+"first_abt_app" = "ABOUT APP";
+"first_abt_app_subtitle" = "App for flight tickets search";
+"first_tickets" = "TICKETS";
+"first_tickets_subtitle" = "Find the cheapest tickets";
+"first_map" = "PRICE MAP";
+"first_map_subtitle" = "Check prices on map";
+"first_favorites" = "FAVORITES";
+"first_favorites_subtitle" = "Save selected tickets into favorites";
+"first_next" = "NEXT";
+"first_done" = "DONE";
+
+// MARK: - MapViewController
+
+"map_title" = "Price map";
+"map_rub" = "RUB";
+
+// MARK: TicketsViewController + TicketTableCell
+
+"tickets_rub" = "RUB";
+"tickets_title_tickets" = "Tickets";
+"tickets_title_favorites" = "Favorites";
+"tickets_actions" = "Actions with ticket";
+"tickets_actions_message" = "What should be done with selected ticket?";
+"tickets_delete" = "Delete from favorites";
+"tickets_add" = "Add to favorites";
+"tickets_remind" = "Remind";
+"tickets_close" = "Close";
+"tickets_for" = "for";
+"tickets_reminder" = "Ticket's reminder";
+"tickets_success" = "Success";
+"tickets_notification" = "Notification will be sent";
+
+// MARK: - PlaceViewController
+
+"place_from" = "From";
+"place_to" = "To";
+"place_cities" = "Cities";
+"place_airports" = "Airports";

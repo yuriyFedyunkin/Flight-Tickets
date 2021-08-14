@@ -12,6 +12,8 @@
 		793FEA1026A60D0C009B6574 /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = 793FEA0F26A60D0C009B6574 /* City.m */; };
 		793FEA1626A60F5C009B6574 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 793FEA1526A60F5C009B6574 /* DataManager.m */; };
 		794F6FE626ADE44D00654B7F /* PlaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 794F6FE526ADE44D00654B7F /* PlaceViewController.m */; };
+		798F82C026C6C9F5008332BD /* NSString+Localize.m in Sources */ = {isa = PBXBuildFile; fileRef = 798F82BF26C6C9F5008332BD /* NSString+Localize.m */; };
+		798F82C426C6CB2F008332BD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 798F82C626C6CB2F008332BD /* Localizable.strings */; };
 		79A567B026B0855700F3DF18 /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A567AF26B0855700F3DF18 /* APIManager.m */; };
 		79A567B426B08D0500F3DF18 /* Ticket.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A567B326B08D0500F3DF18 /* Ticket.m */; };
 		79A567BF26B092A900F3DF18 /* TicketTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 79A567BE26B092A900F3DF18 /* TicketTableViewCell.m */; };
@@ -50,6 +52,11 @@
 		793FEA1526A60F5C009B6574 /* DataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
 		794F6FE426ADE44D00654B7F /* PlaceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlaceViewController.h; sourceTree = "<group>"; };
 		794F6FE526ADE44D00654B7F /* PlaceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlaceViewController.m; sourceTree = "<group>"; };
+		798F82BE26C6C9F5008332BD /* NSString+Localize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Localize.h"; sourceTree = "<group>"; };
+		798F82BF26C6C9F5008332BD /* NSString+Localize.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Localize.m"; sourceTree = "<group>"; };
+		798F82C126C6CABD008332BD /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		798F82C526C6CB2F008332BD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		798F82C726C6CB34008332BD /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		79A567AE26B0855700F3DF18 /* APIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
 		79A567AF26B0855700F3DF18 /* APIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APIManager.m; sourceTree = "<group>"; };
 		79A567B226B08D0500F3DF18 /* Ticket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ticket.h; sourceTree = "<group>"; };
@@ -153,6 +160,15 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		798F82BC26C6C966008332BD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				798F82BE26C6C9F5008332BD /* NSString+Localize.h */,
+				798F82BF26C6C9F5008332BD /* NSString+Localize.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		79A567BB26B0926800F3DF18 /* TicketsViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,6 +256,7 @@
 				79A5681826B70ECC00F3DF18 /* PlaceViewController */,
 				793FEA1326A60F43009B6574 /* Services */,
 				793FEA0426A60CAC009B6574 /* Models */,
+				798F82BC26C6C966008332BD /* Extensions */,
 				79E3756226A6069000043350 /* AppDelegate.h */,
 				79E3756326A6069000043350 /* AppDelegate.m */,
 				79E3756526A6069000043350 /* SceneDelegate.h */,
@@ -250,6 +267,7 @@
 				79E3757026A6069A00043350 /* LaunchScreen.storyboard */,
 				79E3757326A6069A00043350 /* Info.plist */,
 				79E3757426A6069A00043350 /* main.m */,
+				798F82C626C6CB2F008332BD /* Localizable.strings */,
 			);
 			path = "Flight-Tickets";
 			sourceTree = "<group>";
@@ -321,6 +339,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 79E3755626A6068F00043350;
 			productRefGroup = 79E3756026A6069000043350 /* Products */;
@@ -338,6 +357,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				79E3758926A60B7F00043350 /* cities.json in Resources */,
+				798F82C426C6CB2F008332BD /* Localizable.strings in Resources */,
 				79E3757226A6069A00043350 /* LaunchScreen.storyboard in Resources */,
 				79E3758A26A60B7F00043350 /* airports.json in Resources */,
 				79E3756F26A6069A00043350 /* Assets.xcassets in Resources */,
@@ -368,6 +388,7 @@
 				79A568B226BA9B9B00F3DF18 /* FavoriteTicket+CoreDataProperties.m in Sources */,
 				79E3757526A6069A00043350 /* main.m in Sources */,
 				793FEA0C26A60CFC009B6574 /* Country.m in Sources */,
+				798F82C026C6C9F5008332BD /* NSString+Localize.m in Sources */,
 				79A5681026B709F000F3DF18 /* MapPrice.m in Sources */,
 				79A5689D26BA910C00F3DF18 /* CoreDataTicket.xcdatamodeld in Sources */,
 				793FEA1626A60F5C009B6574 /* DataManager.m in Sources */,
@@ -383,10 +404,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		798F82C626C6CB2F008332BD /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				798F82C526C6CB2F008332BD /* en */,
+				798F82C726C6CB34008332BD /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		79E3757026A6069A00043350 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				79E3757126A6069A00043350 /* Base */,
+				798F82C126C6CABD008332BD /* ru */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -398,6 +429,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -457,6 +489,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
