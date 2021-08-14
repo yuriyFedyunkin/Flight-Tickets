@@ -6,6 +6,7 @@
 //
 
 #import "TicketTableViewCell.h"
+#import "NSString+Localize.h"
 
 #define AirlineLogo(iata) [NSURL URLWithString:[NSString stringWithFormat:@"https://pics.avs.io/200/200/%@.png", iata]];
 
@@ -93,7 +94,7 @@
 - (void)setTicket:(Ticket *)ticket {
     _ticket = ticket;
     
-    _priceLabel.text = [NSString stringWithFormat:@"%@ руб.", ticket.price];
+    _priceLabel.text = [NSString stringWithFormat:@"%@ %@", ticket.price, [@"tickets_rub" localize]];
     _placesLabel.text = [NSString stringWithFormat:@"%@ - %@", ticket.from, ticket.to];
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
@@ -114,7 +115,7 @@
 - (void)setFavoriteTicket:(FavoriteTicket *)favoriteTicket {
     _favoriteTicket = favoriteTicket;
     
-    _priceLabel.text = [NSString stringWithFormat:@"%lld руб.", favoriteTicket.price];
+    _priceLabel.text = [NSString stringWithFormat:@"%lld %@", favoriteTicket.price, [@"tickets_rub" localize]];
     _placesLabel.text = [NSString stringWithFormat:@"%@ - %@", favoriteTicket.from, favoriteTicket.to];
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];

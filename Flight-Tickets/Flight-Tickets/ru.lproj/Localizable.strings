@@ -41,3 +41,19 @@
 
 "map_title" = "Карта цен";
 "map_rub" = "руб.";
+
+// MARK: TicketsViewController + TicketTableCell
+
+"tickets_rub" = "руб.";
+"tickets_title_tickets" = "Билеты";
+"tickets_title_favorites" = "Избранное";
+"tickets_actions" = "Действия с билетом";
+"tickets_actions_message" = "Что вы хотите сделать с выбранным билетом?";
+"tickets_delete" = "Удалить из избранного";
+"tickets_add" = "Добавить в избранное";
+"tickets_remind" = "Напомнить";
+"tickets_close" = "Закрыть";
+"tickets_for" = "за";
+"tickets_reminder" = "Напоминание о билете";
+"tickets_success" = "Успех";
+"tickets_notification" = "Уведомление будет отправлено";

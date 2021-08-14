@@ -41,3 +41,19 @@
 
 "map_title" = "Price map";
 "map_rub" = "RUB";
+
+// MARK: TicketsViewController + TicketTableCell
+
+"tickets_rub" = "RUB";
+"tickets_title_tickets" = "Tickets";
+"tickets_title_favorites" = "Favorites";
+"tickets_actions" = "Actions with ticket";
+"tickets_actions_message" = "What should be done with selected ticket?";
+"tickets_delete" = "Delete from favorites";
+"tickets_add" = "Add to favorites";
+"tickets_remind" = "Remind";
+"tickets_close" = "Close";
+"tickets_for" = "for";
+"tickets_reminder" = "Ticket's reminder";
+"tickets_success" = "Success";
+"tickets_notification" = "Notification will be sent";
