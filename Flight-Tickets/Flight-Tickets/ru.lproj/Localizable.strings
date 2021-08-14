@@ -12,7 +12,7 @@
 "map_tab" = "Карта цен";
 "favorites_tab" = "Избранное";
 
-//MARK: -  MainViewController
+// MARK: -  MainViewController
 
 "main_from" = "Откуда";
 "main_to" = "Куда";
@@ -23,3 +23,16 @@
 "main_close" = "Закрыть";
 "main_error" = "Ошибка";
 "main_error_message" = "Необходимо указать место отправления и место прибытия";
+
+// MARK: FirstViewController
+
+"first_abt_app" = "О ПРИЛОЖЕНИИ";
+"first_abt_app_subtitle" = "Приложение для поиска авиабилетов";
+"first_tickets" = "АВИАБИЛЕТЫ";
+"first_tickets_subtitle" = "Находите самые дешевые авиабилеты";
+"first_map" = "КАРТА ЦЕН";
+"first_map_subtitle" = "Просматривайте карту цен";
+"first_favorites" = "ИЗБРАННОЕ";
+"first_favorites_subtitle" = "Сохраняйте выбранные билеты в избранное";
+"first_next" = "ДАЛЕЕ";
+"first_done" = "ГОТОВО";

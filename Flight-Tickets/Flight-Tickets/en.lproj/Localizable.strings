@@ -23,3 +23,16 @@
 "main_close" = "Close";
 "main_error" = "Error";
 "main_error_message" = "Place of arrival and departure is required";
+
+// MARK: FirstViewController
+
+"first_abt_app" = "ABOUT APP";
+"first_abt_app_subtitle" = "App for flight tickets search";
+"first_tickets" = "TICKETS";
+"first_tickets_subtitle" = "Find the cheapest tickets";
+"first_map" = "PRICE MAP";
+"first_map_subtitle" = "Check prices on map";
+"first_favorites" = "FAVORITES";
+"first_favorites_subtitle" = "Save selected tickets into favorites";
+"first_next" = "NEXT";
+"first_done" = "DONE";
