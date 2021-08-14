@@ -57,3 +57,10 @@
 "tickets_reminder" = "Напоминание о билете";
 "tickets_success" = "Успех";
 "tickets_notification" = "Уведомление будет отправлено";
+
+// MARK: - PlaceViewController
+
+"place_from" = "Откуда";
+"place_to" = "Куда";
+"place_cities" = "Города";
+"place_airports" = "Аэропорты";

@@ -57,3 +57,10 @@
 "tickets_reminder" = "Ticket's reminder";
 "tickets_success" = "Success";
 "tickets_notification" = "Notification will be sent";
+
+// MARK: - PlaceViewController
+
+"place_from" = "From";
+"place_to" = "To";
+"place_cities" = "Cities";
+"place_airports" = "Airports";
