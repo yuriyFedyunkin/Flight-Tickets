@@ -36,3 +36,8 @@
 "first_favorites_subtitle" = "Save selected tickets into favorites";
 "first_next" = "NEXT";
 "first_done" = "DONE";
+
+// MARK: - MapViewController
+
+"map_title" = "Price map";
+"map_rub" = "RUB";

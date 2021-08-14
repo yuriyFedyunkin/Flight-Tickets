@@ -10,6 +10,7 @@
 #import "APIManager.h"
 #import "MapPrice.h"
 #import <CoreLocation/CoreLocation.h>
+#import "NSString+Localize.h"
 
 @interface MapViewController ()<MKMapViewDelegate>
 
@@ -33,7 +34,7 @@
 }
 
 -(void)setupViews {
-    self.title = @"Price map";
+    self.title = [@"map_title" localize];
     
     _mapView = [[MKMapView alloc] initWithFrame:self.view.bounds];
     _mapView.showsUserLocation = YES;
@@ -73,7 +74,8 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
             annotation.title = [NSString stringWithFormat:@"%@ (%@)", price.destination.name, price.destination.code];
-            annotation.subtitle = [NSString stringWithFormat:@"%ld руб.", (long)price.value];
+            annotation.subtitle =
+            [NSString stringWithFormat:@"%ld %@", (long)price.value, [@"map_rub" localize]];
             annotation.coordinate = price.destination.coordinate;
             [self->_mapView addAnnotation: annotation];
         });
